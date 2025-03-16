@@ -1,5 +1,5 @@
 # Morse-code-converter
-Converts given words/sentence into Morse code.
+Converts given words/sentence into Morse code, made entirely in C Language.
 
 Reference chart:
 
