@@ -2,7 +2,6 @@
 #include <string.h>
 
 const char* morseEncode(char x) {
-
     switch (x) {
         case 'a': return ".-";
         case 'b': return "-...";
@@ -43,25 +42,23 @@ const char* morseEncode(char x) {
         case ' ': return " ";
         default: return "";
     }
-
 }
 
 void morseCode(const char text[]) {
-
     for (int i = 0; i < strlen(text); i++) {
         if (text[i] == '\n') continue;
         printf("%s ", morseEncode(text[i])); 
     }
     printf("\n");
-
 }
 
 int main() {
-
     char text[100];
     printf("Enter text to convert to Morse code: ");
     fgets(text, sizeof(text), stdin);
+    for(int i = 0; text[i]; i++){
+        text[i] = tolower(text[i]);
+    }
     morseCode(text);
     return 0;
-
 }
