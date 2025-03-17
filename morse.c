@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include<ctype.h>
 
 const char* morseEncode(char x) {
     switch (x) {
@@ -59,6 +60,7 @@ int main() {
     for(int i = 0; text[i]; i++){
         text[i] = tolower(text[i]);
     }
+    printf(">> ");
     morseCode(text);
     return 0;
 }
